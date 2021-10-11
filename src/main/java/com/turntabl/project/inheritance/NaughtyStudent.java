@@ -11,10 +11,6 @@ public class NaughtyStudent extends Student {
 		super();
 	}
 
-	public NaughtyStudent(double averageGrade) {
-		super(averageGrade);
-	}
-
 	public NaughtyStudent(List<Double> grades) {
 		super(grades);
 	}
@@ -29,8 +25,7 @@ public class NaughtyStudent extends Student {
 
 	public void increaseAverageGrade() {
 		double averageGrade = this.getAverageGrade.apply(getGrades());
-		double _10percentOfCurrentAverage = (averageGrade * 10) / 100;
-		double hackedAverageGrade = _10percentOfCurrentAverage + this.getAverageGrade.apply(getGrades());
+		double hackedAverageGrade = (averageGrade * 10) / 100 + this.getAverageGrade.apply(getGrades());
 		System.out.println("Hacked Grade was = ".concat(String.valueOf(averageGrade)).concat(". It is now = ".concat(String.valueOf(hackedAverageGrade))));
 		this.setStudentAverageGrade(hackedAverageGrade);
 		System.out.println("___________________________________________________________________");

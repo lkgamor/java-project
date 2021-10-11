@@ -10,13 +10,13 @@ import com.turntabl.project.enums.Level;
 public class Student implements Nameable, HasLevel {
 
 	private String name;
-	private String level;
+	private Level level;
 	private List<Double> grades;
 	private double studentAverageGrade;
 
 	public Student() {}
 
-	public Student(String level) {
+	public Student(Level level) {
 		this.level = level;
 	}
 	
@@ -35,7 +35,7 @@ public class Student implements Nameable, HasLevel {
 
 	public Student(String name, Level level, List<Double> grades) {
 		this.name = name;
-		this.level = level.toString();
+		this.level = level;
 		this.grades = grades;
 	}
 
@@ -65,7 +65,7 @@ public class Student implements Nameable, HasLevel {
 	}
 
 	@Override
-	public String getLevel() {
+	public Level getLevel() {
 		return level;
 	}	
 
